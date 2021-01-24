@@ -27,7 +27,7 @@ public class Pedido implements Serializable {
 	private Integer id;
 	
 	@JsonFormat(pattern = "dd/MM/yyyy HH:mm")
-	private Date instant;
+	private Date instante;
 
 	//@JsonManagedReference
 	@OneToOne(cascade = CascadeType.ALL, mappedBy = "pedido")	
@@ -40,7 +40,7 @@ public class Pedido implements Serializable {
 
 	@ManyToOne
 	@JoinColumn(name = "endereco_de_entrega_id")
-	private Endereco endercoDeEntrega;
+	private Endereco enderecoDeEntrega;
 	
 	@OneToMany(mappedBy = "id.pedido")
 	private Set<ItemPedido> itens = new HashSet<>();
@@ -48,12 +48,12 @@ public class Pedido implements Serializable {
 	public Pedido() {
 	}
 
-	public Pedido(Integer id, Date instant, Cliente cliente, Endereco endercoDeEntrega) {
+	public Pedido(Integer id, Date instante, Cliente cliente, Endereco enderecoDeEntrega) {
 		super();
 		this.id = id;
-		this.instant = instant;
+		this.instante = instante;
 		this.cliente = cliente;
-		this.endercoDeEntrega = endercoDeEntrega;
+		this.enderecoDeEntrega = enderecoDeEntrega;
 	}
 	
 	public double getValorTotal() {
@@ -72,12 +72,12 @@ public class Pedido implements Serializable {
 		this.id = id;
 	}
 
-	public Date getInstant() {
-		return instant;
+	public Date getInstante() {
+		return instante;
 	}
 
-	public void setInstant(Date instant) {
-		this.instant = instant;
+	public void setInstante(Date instante) {
+		this.instante = instante;
 	}
 
 	public Pagamento getPagamento() {
@@ -96,12 +96,12 @@ public class Pedido implements Serializable {
 		this.cliente = cliente;
 	}
 
-	public Endereco getEndercoDeEntrega() {
-		return endercoDeEntrega;
+	public Endereco getEnderecoDeEntrega() {
+		return enderecoDeEntrega;
 	}
 
-	public void setEndercoDeEntrega(Endereco endercoDeEntrega) {
-		this.endercoDeEntrega = endercoDeEntrega;
+	public void setEnderecoDeEntrega(Endereco enderecoDeEntrega) {
+		this.enderecoDeEntrega = enderecoDeEntrega;
 	}
 
 	public Set<ItemPedido> getItens() {
