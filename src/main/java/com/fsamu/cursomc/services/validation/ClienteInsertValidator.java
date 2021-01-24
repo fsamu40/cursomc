@@ -1,4 +1,4 @@
-package com.fsamu.cursomc.services.vaçidation;
+package com.fsamu.cursomc.services.validation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ import com.fsamu.cursomc.domain.enums.TipoCliente;
 import com.fsamu.cursomc.dto.ClienteNewDTO;
 import com.fsamu.cursomc.repositories.ClienteRepository;
 import com.fsamu.cursomc.resources.exceptions.FieldMessage;
-import com.fsamu.cursomc.services.vaçidation.utils.BR;
+import com.fsamu.cursomc.services.validation.utils.BR;
 
 public class ClienteInsertValidator implements ConstraintValidator<ClienteInsert, ClienteNewDTO> {
 

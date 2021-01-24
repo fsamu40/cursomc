@@ -1,4 +1,4 @@
-package com.fsamu.cursomc.services.vaçidation;
+package com.fsamu.cursomc.services.validation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
